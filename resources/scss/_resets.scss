@@ -1,0 +1,101 @@
+
+/*** Reset css***/
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    &:focus{
+        outline: none;
+    }
+}
+
+a, label, select, input, button{
+    outline: none;
+    &:hover, &:focus, &:active{
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+html{
+    font-size: 100%;
+    line-height: $line-height;
+    background: $body-color;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    color: $font-color;
+    font-size: $font-size;
+    font-family: $font-stack;
+    font-weight: $font-weight;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, form, legend, input, textarea, button, table, tr, th, td, article, aside, footer, header, hgroup, nav, section, img, a, select{
+    box-sizing: border-box;
+    list-style: none;
+    font-size: $font-size;
+    border: none;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    color: $black;
+    &:hover{
+        color: $red;
+    }
+    &.disabled{
+        pointer-events: none;
+    }
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td{
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+header, footer, section{
+    display: block;
+}
+
+input[type="time"]{
+    width: auto;
+    background: $white;
+}
+
+input[type="number"]{
+    appearance: none;
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+        appearance: none;
+        margin: 0;
+    }
+}
+
+textarea, input{
+    appearance: none;
+    border-radius: 0;
+}
+
+button{
+    cursor: pointer;
+    color: $black;
+}
+
+/*** End Reset css***/

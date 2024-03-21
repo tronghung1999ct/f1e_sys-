@@ -1,0 +1,27 @@
+
+.d{
+    $display:(flex, inline-flex, block, inline-block, none);
+    @each $var in $display{
+        &-#{$var}{
+            display: $var
+        }
+    }
+    &-flex{
+        $align-items: stretch, center, start, end, flex-start, flex-end;
+        @each $var in $align-items{
+            &.align-items-#{$var}{
+                display: $var
+            }
+        }
+        $justify-content: center, flex-start, flex-end, space-evenly,  space-between;
+        @each $var in $justify-content{
+            &.justify-content-#{$var}{
+                display: $var
+            }
+        }
+        .flex-fill{
+            flex: 1 0;
+        }
+        
+    }
+}

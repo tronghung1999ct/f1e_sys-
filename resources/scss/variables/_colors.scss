@@ -1,0 +1,129 @@
+
+// Color Original
+$cyan:          #05cef4; // rgb(5, 206, 244)
+$blue:          #0066cc; // rgb(0, 102, 204)
+$red:           #e61e25; // rgb(230, 30, 37)
+$orange:        #f58220; // rgb(245, 130, 32)
+$yellow:        #FFCC00; // rgb(255, 204, 0)
+$green:         #15a24c; // rgb(21, 162, 76)
+$pink:          #E43562; // rgb(228, 53, 98)
+$black-blue:    #2A313C; // rgb(42, 49, 60)
+$gray:          #EFEFEF; // rgb(239, 239, 239)
+$gray-light:    #EDEFF0; // rgb(237, 239, 240)
+$gray-dark:     #D8D8D8; // rgb(216, 216, 216)
+$gray-black:    #595959; // rgb(89, 89, 89)
+$white:         #fff;
+$black:         #000;
+
+// TOKEN COLOR
+$token-red:             $red;
+$token-cyan:            $cyan;
+$token-blue:            $blue;
+$token-orange:          $orange;
+$token-yellow:          $yellow;
+$token-green:           $green;
+$token-pink:            $pink;
+$token-gray:            $gray;
+$token-gray-light:      $gray-light;
+$token-gray-dark:       $gray-dark;
+$token-gray-black:      $gray-black;
+$token-black-blue:      $black-blue;
+$token-white:           $white;
+$token-black:           $black;
+
+// System variables v3.0
+// Grayscale
+$color-global-black:           $black;
+$color-global-white:           $white;
+$color-global-gray10:       #F5F5FA;
+$color-global-gray20:       #EBEBF0;
+$color-global-gray30:       #DDDDE3;
+$color-global-gray40:       #C4C4CF;
+$color-global-gray50:       #A6A6B0;
+$color-global-gray60:       #808089;
+$color-global-gray70:       #64646D;
+$color-global-gray80:       #515158;
+$color-global-gray90:       #38383D;
+$color-global-gray100:      #27272A;
+
+// Blue
+$color-global-blue10:       #F0F8FF;
+$color-global-blue20:       #DBEEFF;
+$color-global-blue30:       #C2E1FF;
+$color-global-blue40:       #94CDFF;
+$color-global-blue50:       #5CB3FF;
+$color-global-blue60:       #1A94FF;
+$color-global-blue70:       #0B74E5;
+$color-global-blue80:       #0D5BB5;
+$color-global-blue90:       #074183;
+$color-global-blue100:      #052E5C;
+
+// Green
+$color-global-green10:      #EFFFF4;
+$color-global-green20:      #D7FAE0;
+$color-global-green30:      #B7EFC3;
+$color-global-green40:      #78DA90;
+$color-global-green50:      #2DC26D;
+$color-global-green60:      #00AB56;
+$color-global-green70:      #079449;
+$color-global-green80:      #007D3A;
+$color-global-green90:      #04592C;
+$color-global-green100:     #03401F;
+
+// Red
+$color-global-red10:        #FFF0F1;
+$color-global-red20:        #FFDBDE;
+$color-global-red30:        #FFB8BC;
+$color-global-red40:        #FF99A0;
+$color-global-red50:        #FF707A;
+$color-global-red60:        #FF424E;
+$color-global-red70:        #D93843;
+$color-global-red80:        #BF1D28;
+$color-global-red90:        #910F17;
+$color-global-red100:       #6E0B12;
+
+// Yellow
+$color-global-yellow10:     #FFFCED;
+$color-global-yellow20:     #FFF5C7;
+$color-global-yellow30:     #FFE880;
+$color-global-yellow40:     #FFD530;
+$color-global-yellow50:     #FFC400;
+$color-global-yellow60:     #FFB700;
+$color-global-yellow70:     #E59900;
+$color-global-yellow80:     #CC8100;
+$color-global-yellow90:     #B26500;
+$color-global-yellow100:    #995200;
+
+// Orange
+$color-global-orange10:     #FFF5EB;
+$color-global-orange20:     #FFE2C6;
+$color-global-orange30:     #FFD1A4;
+$color-global-orange40:     #FFB56C;
+$color-global-orange50:     #FF9F41;
+$color-global-orange60:     #FC820A;
+$color-global-orange70:     #E36301;
+$color-global-orange80:     #B64F00;
+$color-global-orange90:     #903F00;
+$color-global-orange100:    #6C2F00;
+
+$colors: (
+    'red': $token-red,
+    'blue': $token-blue,
+    'green': $token-green,
+    'yellow': $token-yellow,
+    'orange': $token-orange,
+    'black-blue': $token-black-blue,
+    'white': $token-white,
+    'black': $token-black,
+
+    'warning': $token-yellow,
+    'success': $token-green,
+    'info': $token-blue,
+);
+
+
+$body-color: rgba($black, 0.015);
+// $lighter: lighten($white,$black);
+// Tint color HUE + white => HUE-lighter (Pastel)
+// Tone color HUE + gray => HUE-darker
+// Shade color HUE + black => color-HUE-shade

@@ -1,0 +1,84 @@
+
+// x: horizon   - left_right 
+// y: vertical  - top_bottom
+// m: margin    | mx: margin - left - right  | my: margin - top - bot 
+// p: padding   | px: padding - left - right | py: padding - top - bot
+// spacing : 16px
+@for $var from 1 through 2{
+    .my{
+        &-#{$var}{
+            margin-top: ($margin-size*$var);
+            margin-bottom: ($margin-size*$var);
+        }
+        &-#{$var}5{
+            margin-top: ($margin-size*$var + $margin-size*.5);
+            margin-bottom: ($margin-size*$var + $margin-size*.5);
+        }
+    }
+    .mx{
+        &-#{$var}{
+            margin-left: ($margin-size*$var);
+            margin-right: ($margin-size*$var);
+        }
+        &-#{$var}5{
+            margin-left: ($margin-size*$var + $margin-size*.5);
+            margin-right: ($margin-size*$var + $margin-size*.5);
+        }
+        &-auto{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+        
+    .py{
+        &-#{$var}{
+            padding-top: ($margin-size*$var);
+            padding-bottom: ($margin-size*$var);
+        }
+        &-#{$var}5{
+            padding-top: ($margin-size*$var + $margin-size*.5);
+            padding-bottom: ($margin-size*$var + $margin-size*.5);
+        }
+
+    }
+    .px{
+        &-#{$var}{
+            padding-left: ($margin-size*$var);
+            padding-right: ($margin-size*$var);
+        }
+        &-#{$var}5{
+            padding-left: ($margin-size*$var + $margin-size*.5);
+            padding-right: ($margin-size*$var + $margin-size*.5);
+        }
+    }
+}
+@for $var from 0 through 2{
+    $position: top, left, right, bottom;
+    .m-#{$var}{
+        margin: $margin-size*$var;
+    }
+    .m-#{$var}5{
+        margin: ($margin-size*$var + $margin-size*.5);
+    }
+    .p-#{$var}{
+        padding: $margin-size*$var;
+    }
+    .p-#{$var}5{
+        padding: ($margin-size*$var + $margin-size*.5);
+    }
+    @each $p in $position{
+
+        .m#{str-slice($p, 0, 1)}-#{$var}{
+            margin-#{$p}: $margin-size*$var;
+        }
+        .m#{str-slice($p,0,1)}-#{$var}5{
+            margin-#{$p}: ($margin-size*$var + $margin-size*.5);
+        }
+        .p#{str-slice($p, 0, 1)}-#{$var}{
+            padding-#{$p}: $margin-size*$var;
+        }
+        .p#{str-slice($p,0,1)}-#{$var}5{
+            padding-#{$p}: ($margin-size*$var + $margin-size*.5);
+        }
+    }
+}

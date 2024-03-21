@@ -1,0 +1,32 @@
+
+// Line height
+$line-height-sm: 1;
+$line-height-md: 1.2;
+$line-height-lg: 1.4;
+$line-height-xl: 1.5;
+
+$line-height: $line-height-md;
+
+// Font size 
+$sys-font-original: 1rem;
+
+$font-size-xs: $sys-font-original*0.625;    // 10px
+$font-size-sm: $sys-font-original*0.75;     // 12px
+$font-size-md: $sys-font-original*0.875;    // 14px
+$font-size-lg: $sys-font-original;          // 16px
+$font-size-xl: $sys-font-original*1.125;    // 18px
+$font-size-2x: $sys-font-original*1.25;     // 20px
+$font-size-3x: $sys-font-original*1.375;    // 22px
+$font-size-4x: $sys-font-original*1.5;      // 24px
+
+$font-size: $font-size-md;
+
+// Font color
+$font-color: $black;
+
+// Font weight
+$font-weight: normal;
+
+// font family
+$font-stack: 'Roboto', 'Arial', 'Helvetica', 'Helvetica Neue', 'sans-serif';
+
