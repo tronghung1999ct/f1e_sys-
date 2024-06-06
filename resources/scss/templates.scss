@@ -1,12 +1,10 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+@import './_resets.scss';
+@import './_commons.scss';
 
-// Template Reset
-@import './variables';
-@import './mixins';
-@import './resets';
-@import './commons';
+// UTILITIES
+@import './utilities/_icons.scss';
 
-// Utilities
-@import './utilities/spacings';
-@import './utilities/colors';
-
-@import './utilities/imgs';
+// STLYEGUIDES
+@import './styleguide/_buttons.scss';

@@ -1,0 +1,248 @@
+@import "../_variables";
+
+%btn{
+    display: inline-block;
+    font-weight: inherit;
+    color: inherit;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: $red;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    border-radius: $border-radius-lg;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    @extend %btn-sm;
+}
+
+%btn-sm{
+    font-size: .75rem;
+    padding: $margin-size*.25 $margin-size*.75;
+}
+%btn-md{
+    font-size: .875rem;
+    line-height: 24px;
+    padding: $margin-size*.25 $margin-size*.75;
+}
+%btn-lg{
+    font-size: 1rem;
+    padding: $margin-size*.5 $margin-size*.75;
+}
+%btn-xl{
+    font-size: 1rem;
+    padding: $margin-size*.75 $margin-size;
+	
+}
+
+.btn{
+    @extend %btn;
+    &.btn-md{
+        @extend %btn-md;
+    }
+    &.btn-lg{
+        @extend %btn-lg;
+    }
+    &.btn-xl{
+        @extend %btn-xl;
+    }
+
+    &:focus, &.focus{
+        outline: 0;
+    }
+    input[type=file]{
+        display: none;
+    }
+    &.disabled, &:disabled{
+        background-color: $color-alias-outline-overlay;
+        border-color: transparent;
+        color: $color-alias-disabled;
+        pointer-events: none;
+        cursor: none;
+    }
+}
+.btn{
+    & + .btn{
+        margin-left: $margin-size*.75;
+    }
+}
+.btn-block{
+    width: 100%;
+    & + .btn-block{
+        margin-top: $margin-size*.75;
+    }
+}
+ 
+
+
+.btn-link{
+	font-weight: $font-weight;
+	color: $blue;
+	text-decoration: none;
+	&:disabled, &.disabled{
+		color: #6c757d;
+		pointer-events: none;
+    }
+}
+
+input{
+	&[type="submit"].btn-block, &[type="reset"].btn-block, &[type="button"].btn-block{
+		width: 100%;
+    }
+}
+
+// .btn-show-all
+// 	border: 1px solid $gray-light
+// 	border-radius: $border-radius-lg
+// 	height: 48px
+// 	line-height: 48px
+// 	padding: 0
+// 	background: $white
+// 	display: block
+// 	text-align: center
+// 	span
+// 		font-size: $font-size
+// 		color: $blue
+// 		&:after
+// 			content: ""
+// 			width: 6px
+// 			height: 6px
+// 			border-top: 2px solid $blue
+// 			border-right: 2px solid $blue
+// 			display: inline-block
+// 			transform: rotate(45deg) translateX(2px) translateY(-3px)
+
+// .btn-arrow-down
+// 	&:after
+// 		content: ""
+// 		width: 6px
+// 		height: 6px
+// 		border-style: solid
+// 		border-width: 1px 1px 0 0
+// 		display: inline-block
+// 		transform: rotate(45deg) translateX(2px) translateY(-3px)
+// .btn-arrow-right
+// 	position: relative
+// 	padding-right: $margin-size*0.5
+// 	display: inline-flex
+// 	align-items: center
+// 	&::after
+// 		content: ""
+// 		display: inline-block
+// 		width: 5px
+// 		height: 5px
+// 		border-style: solid
+// 		border-width: 1px 1px 0 0
+// 		position: absolute
+// 		top: 50%
+// 		right: 4px
+// 		transform: rotate(45deg) translateY(-50%)
+// 		margin-top: -1px
+
+// .btn-plus, .btn-minus
+// 	position: relative
+// 	&::after, &::before
+// 		content: ""
+// 		width: 12px
+// 		height: 0
+// 		border-top: 1px solid
+// 		position: absolute
+// 		margin: auto
+// 		top: 0
+// 		right: 0
+// 		bottom: 0
+// 		left: 0
+// .btn-plus
+// 	&::after
+// 		transform: rotate(90deg)
+// .btn-minus
+// 	&::after
+// 		content: none
+// .btn-sort
+// 	&::after
+// 		display: none
+// 	span
+// 		position: relative
+// 		padding-right: $margin-size*.75
+// 		&::before, &::after
+// 			content: ''
+// 			display: block
+// 			position: absolute
+// 			width: 4px
+// 			height: 4px
+// 			border: 1px solid 
+// 			transform: rotate(45deg)
+// 			right: 0px
+// 		&::before
+// 			border-color: $old-gray transparent transparent $old-gray
+// 			top: 3px
+// 		&::after
+// 			border-color: transparent $old-gray $old-gray transparent
+// 			bottom: 3px
+// 	&.actived
+// 		color: $red
+// 	&.btn-arrow-up
+// 		span
+// 			&::before
+// 				border-color: $red transparent transparent $red
+// 	&.btn-arrow-down
+// 		span
+// 			&::after
+// 				border-color: transparent $red $red transparent
+
+// $buttons-black-color: ("yellow": $color-global-yellow50)
+// @each $name, $color in $buttons-black-color
+// 	.btn-#{$name}
+// 		background: $color
+// 		border-color: $color
+// 		color: $black
+// 		transition: .15s
+// 	.btn-outline-#{$name}
+// 		background: $white
+// 		border-color: $color
+// 		color: $color
+
+// $buttons-light-color: ("white": $white, "gray": $gray, "gray-light": $gray-light)
+// @each $name, $color in $buttons-light-color
+// 	.btn-#{$name}
+// 		background: $color
+// 		border-color: $color
+// 		color: $gray-black
+// 		transition: .15s
+// 		&:hover
+// 			background-color: darken( $color, 5)
+// 	.btn-outline-#{$name}
+// 		background: $white
+// 		border-color: $color
+// 		color: $color
+// 		&:hover
+// 			background: $color
+// 			color: $black
+// $buttons-dark-color: ("primary": $blue, "blue": $blue, "danger": $red, "red": $red, "warning": $orange, "orange": $orange, "success": $green, "green": $green, "black": $black, "black-blue": $black-blue, "gray-dark": $gray-dark, "gray-black": $gray-black, "secondary": $gray-black)
+// @each $name, $color in $buttons-dark-color
+// 	.btn-#{$name}
+// 		background: $color
+// 		border-color: $color
+// 		transition: .15s
+// 		color: $white
+// 		&:hover
+// 			background-color: darken( $color, 5)
+// 	.btn-outline-#{$name}
+// 		background: $white
+// 		border-color: $color
+// 		color: $color
+// 		&:hover
+// 			background: $color
+// 			color: $white
+
+
+
+
+
+
+
+
+
+
+
+

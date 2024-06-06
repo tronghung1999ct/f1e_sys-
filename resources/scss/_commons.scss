@@ -1,18 +1,1 @@
 
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    .page_content{
-        flex-shrink: 1;
-        flex-basis: 0;
-        flex-grow: 1;
-    }
-}
-.page-default{
-    background: $white;
-    margin-top: $margin-size;
-    height: 100% !important;
-    // border-radius: $border-radius;
-    padding: $margin-size $margin-size*2 $margin-size*2;
-}

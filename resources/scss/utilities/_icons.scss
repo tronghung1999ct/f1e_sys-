@@ -1,0 +1,128 @@
+
+.icon{
+    display: inline-block;
+    background: $link-icon-images 0 0 no-repeat;
+    line-height: inherit;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+%icon_xm{
+    background-size: calc(384px * 0.25) calc(144px * 0.25);
+    width: 12px;
+    height: 12px;
+}
+%icon_sm{
+    background-size: calc(384px * 0.5) calc(144px * 0.5);
+    width: 16px;
+    height: 16px;
+}
+%icon_md{
+    background-size: calc(384px * 0.75) calc(144px * 0.75);
+    width: 20px;
+    height: 20px;
+}
+%icon_lg{
+    background-size: calc(384px * 1) calc(144px * 1);
+    width: 24px;
+    height: 24px;
+}
+
+// Resize icon 24 => 16 follow by ratio 2:3
+// &.resize-16
+//     width: calc(( ( 1 / 3 ) * 2 ) * 24px)
+//     height: calc(( ( 1 / 3 ) * 2 ) * 24px)
+//     background-size: calc(360px * ( ( 1 / 3 ) * 2 )) calc(360px * ( ( 1 / 3 ) * 2 ))
+.icon{
+    @extend %icon_lg;
+    &.icon-sm{
+        @extend %icon_sm;
+    }
+    &.icon-md{
+        @extend %icon_md;
+    }
+    &-loading-circle{
+        background: none;
+        &::after{
+            content: "";
+            width: calc( 100% - 6px - 2px );
+            height: calc( 100% - 6px - 2px);
+            margin: 2px;
+            display: block;
+            border: 2px solid rgba(39,39,42,.4);
+            border-top-color: #27272a;
+            border-radius: 100%;
+            // margin: 16px auto;
+            animation: spin 1.5s linear infinite;
+        }
+    }
+}
+
+.icon{
+    &-user-line{
+        @include icon($x: 0, $y: 3);
+    }
+    &-user-solid{
+        @include icon($x: 1, $y: 3);
+    }
+
+    &-user_group-line{
+        @include icon($x: 2, $y: 3);
+    }
+    &-user_group-solid{
+        @include icon($x: 3, $y: 3);
+    }
+
+    &-eye-line{
+        @include icon($x: 4, $y: 3);
+    }
+    &-eye-solid{
+        @include icon($x: 5, $y: 3);
+    }
+
+    &-eye-line-slash{
+        @include icon($x: 6, $y: 3);
+    }
+    &-eye-solid-slash{
+        @include icon($x: 7, $y: 3);
+    }
+
+    &-share_v1-line{
+        @include icon($x: 8, $y: 3);
+    }
+    &-share_v1-solid{
+        @include icon($x: 9, $y: 3);
+    }
+
+    &-bell-line{
+        @include icon($x: 10, $y: 3);
+    }
+    &-bell-solid{
+        @include icon($x: 11, $y: 3);
+    }
+
+    &-bell-line-slash{
+        @include icon($x: 12, $y: 3);
+    }
+    &-bell-solid-slash{
+        @include icon($x: 13, $y: 3);
+    }
+
+    &-can_trash-line{
+        @include icon($x: 14, $y: 3);
+    }
+    &-can_trash-solid{
+        @include icon($x: 15, $y: 3);
+    }
+
+    &-heart-solid{
+        @include icon($x: 6, $y: 4);
+    }
+    &-heart-line{
+        @include icon($x: 0, $y: 4);
+        &.actived{
+            @extend .icon-heart-solid;
+        }
+    }
+}
