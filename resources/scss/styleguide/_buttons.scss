@@ -7,7 +7,7 @@
     text-align: center;
     vertical-align: middle;
     user-select: none;
-    background-color: $red;
+    background-color: transparent;
     border: 1px solid transparent;
     line-height: 1.5;
     border-radius: $border-radius-lg;
@@ -37,6 +37,23 @@
 
 .btn{
     @extend %btn;
+    span{
+        line-height: inherit;
+        color: inherit;
+        font-size: inherit;
+    }
+    &.leading{
+        .icon ~ span{
+            margin-left: $margin-size*.25;
+        }
+    }
+    &.trailing{
+        span ~ .icon{
+            margin-left: $margin-size*.25;
+        }
+    }
+
+    
     &.btn-md{
         @extend %btn-md;
     }
@@ -47,6 +64,19 @@
         @extend %btn-xl;
     }
 
+    &.btn-icon{
+        line-height: 1;
+        padding: $margin-size*.25;
+        &.btn-md{
+            padding: $margin-size*.5;
+        }
+        &.btn-lg{
+            padding: $margin-size*.75;
+        }
+        &.btn-xl{
+            padding: $margin-size;
+        }
+    }
     &:focus, &.focus{
         outline: 0;
     }
@@ -72,7 +102,62 @@
         margin-top: $margin-size*.75;
     }
 }
- 
+ .btn{
+    $arr-line_height : (
+        'blue':         $blue,
+        'red':          $red,
+        'orange':       $orange,
+        'yellow':       $yellow,
+        'green':        $green,
+        'white':        $white,
+        'black':        $black,
+        'black-blue':   $black-blue,
+        'gray':         $gray,
+        'gray-light':   $gray-light,
+        'gray-dark':    $gray-dark,
+        'gray-black':   $gray-black,
+    );
+
+    @each $name, $value in $arr-line_height{
+        &.btn-#{$name}{
+            background-color: $value;
+            @if($name == 'yellow' 
+                or $name == 'white' 
+                or $name == 'orange' 
+                or $name == 'gray' 
+                or $name == 'gray-light' 
+                or $name == 'gray-dark'){
+
+                color: $color-global-black;
+            }@else{
+                color: $color-global-white;
+            }
+            &:hover{
+                background-color: darken($value, 6.65);
+            }
+        }
+        &.btn-outline-#{$name}{
+            background-color: transparent;
+            border-color: $value;
+            color: $value;
+            &:hover{
+                @if($name == 'yellow' 
+                    or $name == 'white' 
+                    or $name == 'orange' 
+                    or $name == 'gray' 
+                    or $name == 'gray-light' 
+                    or $name == 'gray-dark'){
+
+                    color: $color-global-black;
+                }@else{
+                    color: $color-global-white;
+                }
+                background-color: $value;
+            }
+        }
+    }
+    
+ }
 
 
 .btn-link{
