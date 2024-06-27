@@ -1,0 +1,32 @@
+.table-format{
+    &.full-width{
+        width: 100%;
+    }
+}
+.footer{
+    table{
+        th{
+            font-weight: bold;
+            color: $color-global-white;
+        }
+        td,th{
+            padding: 4px 8px;
+        }
+        td{
+            color: $color-global-gray20;
+        }
+        a{
+            color: inherit;
+        }
+    }
+    .table-format{
+        max-width: 1280px;
+        margin: auto;
+    }
+    .footer-navigate{
+        &:hover{
+            color: $red;
+            text-decoration: underline;
+        }
+    }
+}

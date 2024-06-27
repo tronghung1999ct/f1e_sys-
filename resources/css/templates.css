@@ -1620,5 +1620,30 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
     left: 0;
   }
 }
+.table-format.full-width {
+  width: 100%;
+}
+
+.footer table th {
+  font-weight: bold;
+  color: #fff;
+}
+.footer table td, .footer table th {
+  padding: 4px 8px;
+}
+.footer table td {
+  color: #EBEBF0;
+}
+.footer table a {
+  color: inherit;
+}
+.footer .table-format {
+  max-width: 1280px;
+  margin: auto;
+}
+.footer .footer-navigate:hover {
+  color: #E61E25;
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=templates.css.map */
