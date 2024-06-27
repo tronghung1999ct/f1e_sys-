@@ -1,0 +1,73 @@
+
+
+.d{
+    $display: ('block','inline-block','flex','inline-flex');
+    &-flex-fill{
+        >*{
+            flex: 1 0 0;
+        }
+    }
+    @each $d in $display{
+        &-#{$d}{
+            display: #{$d};
+        }
+    }
+    &-flex-wrap{
+        flex-wrap: wrap;
+    }
+    &-flex-nowrap{
+        flex-wrap: nowrap;
+    }
+}
+.flex-fill{
+    flex: 1 0 0;
+}
+.d-flex{
+    $flex-align: (
+        'normal','flex-start','flex-end','center','stretch','baseline'
+    );
+    $flex-justify: (
+        'normal','flex-start','flex-end','center','space-between','space-around','space-evenly'
+    );
+    @each $fa in $flex-align{
+        &.align-items-#{$fa}{
+            align-items: #{$fa};
+        }
+    }
+    @each $fj in $flex-justify{
+        &.justify-content-#{$fj}{
+            justify-content: #{$fj};
+        }
+    }
+}
+
+
+.media{
+    @extend .d-flex;
+    &.horizon{
+        &-center{
+            @extend .align-items-center;
+        }
+        &-stretch{
+            @extend .align-items-stretch;
+        }
+    }
+    &.vertical{
+        &-center{
+            @extend .justify-content-center;
+        }
+        &-right{
+            @extend .justify-content-flex-end;
+        }
+        &-left{
+            @extend .justify-content-flex-end;
+        }
+        &-between{
+            @extend .justify-content-space-between;
+        }
+    }
+    
+    .media-body{
+        flex: 1 0 0;
+    }
+}

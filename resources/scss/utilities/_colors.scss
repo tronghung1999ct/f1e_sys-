@@ -1,0 +1,44 @@
+
+$color-blue:(
+    'blue10': $color-global-blue10,
+    'blue20': $color-global-blue20,
+    'blue30': $color-global-blue30,
+    'blue40': $color-global-blue40,
+    'blue50': $color-global-blue50,
+    'blue60': $color-global-blue60,
+    'blue70': $color-global-blue70,
+    'blue80': $color-global-blue80,
+    'blue90': $color-global-blue90,
+    'blue100': $color-global-blue100
+);
+
+$color-system:(
+    'blue'          : $blue,
+    'red'           : $red,
+    'orange'        : $orange,
+    'yellow'        : $yellow,
+    'green'         : $green,
+    'white'         : $white,
+    'black'         : $black,
+    'black-blue'    : $black-blue,
+    'gray'          : $gray,
+    'gray-light'    : $gray-light,
+    'gray-dark'     : $gray-dark,
+    'gray-black'    : $gray-black,
+    'old-gray'      : $old-gray,
+);
+
+@each $name, $value in $color-system{
+    .bg-#{$name}{
+        background-color: $value;
+    }
+}
+
+
+
+
+
+
+
+
+

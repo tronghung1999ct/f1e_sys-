@@ -60,6 +60,10 @@
 }
 
 .icon{
+    &-menu-hamberger-line{
+        @include icon($x: 2, $y: 1);
+    }
+   
     &-user-line{
         @include icon($x: 0, $y: 3);
     }

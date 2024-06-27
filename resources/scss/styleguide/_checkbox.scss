@@ -1,0 +1,84 @@
+.checkbox{
+    position: relative;
+    padding: 2px;
+    background-color: transparent;
+    display: inline-block;
+    line-height: 0;
+    .checkmark{
+        display: inline-flex;
+        height: 20px;
+        width: 20px;
+        border: 1px solid $color-alias-outline;
+        border-radius: $border-radius-lg;
+        background-color: $color-global-gray10;
+        // margin-right: $margin-size*0.25;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: .15s ease;
+        &::after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    input{
+        &:checked ~ .checkmark{
+            background-color: $red;
+            border-color: $red;
+            &::after{
+                display: inline-block;
+                width: 5px;
+                height: 10px;
+                border-style: solid;
+                border-color: $white;
+                border-width: 0 1px 1px 0;
+                transform: rotate(45deg) translate(-50%, -50%);
+                transform-origin: 0 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -2px;
+            }
+        }
+        &:disabled ~ .checkmark{
+            background-color: $color-alias-outline-overlay;
+            border-color: $color-alias-outline-overlay;
+        }
+    }
+    &.indeterminate{
+        .checkmark{
+            // border: 1px solid $color-alias-outline;
+            border-color: transparent;
+            background-color: $red;
+        }
+        input{
+            & ~ .checkmark{
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 2px;
+                    border-radius: $border-radius-lg;
+                    background-color: $white;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &:disabled ~ .checkmark{
+                border-color: $color-alias-outline-overlay;
+                &::after{
+                    background-color: $color-alias-outline-overlay;
+                }
+            }
+            &:checked ~ .checkmark{
+                &::after{
+                    border: 0;
+                    top: calc(50% + 2px);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}

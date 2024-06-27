@@ -4,7 +4,15 @@
 @import './_commons.scss';
 
 // UTILITIES
+@import './utilities/_spacings.scss';
 @import './utilities/_icons.scss';
+@import './utilities/_colors.scss';
+@import './utilities/_images.scss';
 
 // STLYEGUIDES
+@import './styleguide/_media.scss';
 @import './styleguide/_buttons.scss';
+@import './styleguide/_checkbox.scss';
+@import './styleguide/_switch.scss';
+
+@import './layouts/_header.scss'

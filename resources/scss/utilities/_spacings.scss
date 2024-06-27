@@ -1,0 +1,71 @@
+$position: (top, left, right, bottom);
+@for $i from 0 through 5{
+    .m-#{$i}{
+        margin: $margin-size*$i;
+    }
+    .m-#{$i}5{
+        margin: $margin-size*$i + $margin-size*.5;
+    }
+
+    .mx-#{$i}{
+        margin-left: $margin-size*$i;
+        margin-right: $margin-size*$i;
+    }
+    .my-#{$i}{
+        margin-top: $margin-size*$i;
+        margin-bottom: $margin-size*$i;
+    }
+
+    .mx-#{$i}5{
+        margin-left: $margin-size*$i + $margin-size*.5;
+        margin-right: $margin-size*$i + $margin-size*.5;
+    }
+    .my-#{$i}5{
+        margin-top: $margin-size*$i + $margin-size*.5;
+        margin-bottom: $margin-size*$i + $margin-size*.5;
+    }
+
+    @each $p in $position{
+        .m#{str-slice($p, 0, 1)}-#{$i}{
+            margin-#{$p}: $margin-size*$i;
+        }
+        .m#{str-slice($p,0,1)}-#{$i}5{
+            margin-#{$p}: $margin-size*$i + $margin-size*.5;
+        }
+    }
+}
+@for $i from 0 through 5{
+    .p-#{$i}{
+        padding: $margin-size*$i;
+    }
+    .p-#{$i}5{
+        padding: $margin-size*$i + $margin-size*.5
+    }
+
+    .px-#{$i}{
+        padding-left: $margin-size*$i;
+        padding-right: $margin-size*$i;
+    }
+    .py-#{$i}{
+        padding-top: $margin-size*$i;
+        padding-bottom: $margin-size*$i;
+    }
+
+    .px-#{$i}5{
+        padding-left: $margin-size*$i + $margin-size*.5;
+        padding-right: $margin-size*$i + $margin-size*.5;
+    }
+    .py-#{$i}5{
+        padding-top: $margin-size*$i + $margin-size*.5;
+        padding-bottom: $margin-size*$i + $margin-size*.5;
+    }
+
+    @each $p in $position{
+        .p#{str-slice($p, 0, 1)}-#{$i}{
+            padding-#{$p}: $margin-size*$i;
+        }
+        .p#{str-slice($p,0,1)}-#{$i}5{
+            padding-#{$p}: $margin-size*$i + $margin-size*.5;
+        }
+    }
+}

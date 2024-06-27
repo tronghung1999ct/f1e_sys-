@@ -127,7 +127,6 @@
                 or $name == 'gray' 
                 or $name == 'gray-light' 
                 or $name == 'gray-dark'){
-
                 color: $color-global-black;
             }@else{
                 color: $color-global-white;
@@ -137,22 +136,26 @@
             }
         }
         &.btn-outline-#{$name}{
-            background-color: transparent;
-            border-color: $value;
-            color: $value;
-            &:hover{
-                @if($name == 'yellow' 
-                    or $name == 'white' 
-                    or $name == 'orange' 
-                    or $name == 'gray' 
-                    or $name == 'gray-light' 
-                    or $name == 'gray-dark'){
-
-                    color: $color-global-black;
-                }@else{
-                    color: $color-global-white;
+            @if($name == 'white' or $name == 'gray' or $name == 'gray-light' or $name == 'gray-dark' ){
+                color: $color-global-gray100;
+                border-color: $value;
+                &:hover{
+                    background-color: $value;
                 }
-                background-color: $value;
+            }@else{
+                background-color: transparent;
+                border-color: $value;
+                color: $value;
+                &:hover{
+                    @if($name == 'yellow' 
+                        or $name == 'white' 
+                        or $name == 'orange' ){
+                        color: $color-global-black;
+                    }@else{
+                        color: $color-global-white;
+                    }
+                    background-color: $value;
+                }
             }
         }
     }
@@ -164,6 +167,15 @@
 	font-weight: $font-weight;
 	color: $blue;
 	text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:hover{
+        color: $red;
+    }
+    &.hover-underline{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
 	&:disabled, &.disabled{
 		color: #6c757d;
 		pointer-events: none;
