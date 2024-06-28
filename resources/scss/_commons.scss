@@ -9,6 +9,19 @@ body{
     }
 
 }
+
+.sticky-top{
+    position: sticky;
+    top: 0;
+}
+.wrapper-content{
+    margin-bottom: $margin-size*1.5;
+}
+.container{
+    max-width: 1280px;
+    @extend .mx-auto;
+}
+
 .line-height{
     &-sm{
         line-height: 1;

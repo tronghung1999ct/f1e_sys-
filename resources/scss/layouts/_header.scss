@@ -1,4 +1,5 @@
 .header{
+    z-index: 1;
     .header-top-navigation{
         padding-right: $margin-size;
         border-right: 1px solid $color-alias-outline;
@@ -39,6 +40,7 @@
     right: 0;
     bottom: 0;
     visibility: hidden;
+    z-index: 10;
     .overlay{
         transition: 0.235s ease-in;
         opacity: 0;

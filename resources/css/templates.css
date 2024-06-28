@@ -111,6 +111,19 @@ body.show-popup {
   overflow: hidden;
 }
 
+.sticky-top {
+  position: sticky;
+  top: 0;
+}
+
+.wrapper-content {
+  margin-bottom: 24px;
+}
+
+.container {
+  max-width: 1280px;
+}
+
 .line-height-sm {
   line-height: 1;
 }
@@ -854,6 +867,11 @@ a, span {
   padding-bottom: 88px;
 }
 
+.mx-auto, .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .icon {
   display: inline-block;
   background: url("../images/icons/icon_system.png") 0 0 no-repeat;
@@ -1535,6 +1553,9 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
   margin: 2px;
 }
 
+.header {
+  z-index: 1;
+}
 .header .header-top-navigation {
   padding-right: 16px;
   border-right: 1px solid #DDDDE3;
@@ -1574,6 +1595,7 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
   right: 0;
   bottom: 0;
   visibility: hidden;
+  z-index: 10;
 }
 .popup .overlay {
   transition: 0.235s ease-in;
@@ -1642,7 +1664,6 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
   margin: auto;
 }
 .footer .footer-navigate:hover {
-  color: #E61E25;
   text-decoration: underline;
 }
 

@@ -3,6 +3,7 @@
         width: 100%;
     }
 }
+
 .footer{
     table{
         th{
@@ -25,7 +26,6 @@
     }
     .footer-navigate{
         &:hover{
-            color: $red;
             text-decoration: underline;
         }
     }
